@@ -1,8 +1,8 @@
+import Router from "./routes";
 function App() {
-
   return (
      <div className="App">
-      Hello Again
+        <Router/>
      </div>
   )
 }
