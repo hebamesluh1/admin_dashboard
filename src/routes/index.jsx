@@ -17,6 +17,11 @@ const Router = () => {
           <Route path={PATHS.NEW} element={<New />} />
           <Route path=":userId" element={<Single />} />
         </Route>
+        <Route path={PATHS.PRODUCTS}>
+          <Route index element={<List />} />
+          <Route path={PATHS.NEW} element={<New />} />
+          <Route path=":productId" element={<Single />} />
+        </Route>
       </Route>
     </Routes>
   )
@@ -29,5 +34,6 @@ export const PATHS = {
   HOME: "/",
   LOGIN: "login",
   USERS: "users",
-  NEW: "new"
+  NEW: "new",
+  PRODUCTS:"products"
 };
