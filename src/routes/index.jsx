@@ -23,6 +23,7 @@ const Router = () => {
           <Route path=":productId" element={<Single />} />
         </Route>
       </Route>
+      <Route path="*" element={<h1>Page not Found</h1>} />
     </Routes>
   )
 
