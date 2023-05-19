@@ -1,4 +1,5 @@
 import './style.scss';
+import { Link } from 'react-router-dom';
 
 //icons 
 import DashboardIcon from '@mui/icons-material/Dashboard';
@@ -18,33 +19,45 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="top">
-        <span className="logo">DASHBOARD</span>
+        <Link to="/">
+          <span className="logo">DASHBOARD</span>
+        </Link>
       </div>
       <hr />
       <div className="center">
         <ul>
           <p className="title">MAIN</p>
-          <li>
-            <DashboardIcon className="icon" />
-            <apan>Dashboard</apan>
-          </li>
+          <Link to="/">
+            <li>
+              <DashboardIcon className="icon" />
+              <apan>Dashboard</apan>
+            </li>
+          </Link>
           <p className="title">LISTS</p>
-          <li>
-            <PeopleOutlinedIcon className="icon" />
-            <apan>Users</apan>
-          </li>
-          <li>
-            <ProductionQuantityLimitsOutlinedIcon className="icon" />
-            <apan>Products</apan>
-          </li>
-          <li>
-            <BorderStyleOutlinedIcon className="icon" />
-            <apan>Orders</apan>
-          </li>
-          <li>
-            <DeliveryDiningOutlinedIcon className="icon" />
-            <apan>Delivery</apan>
-          </li>
+          <Link to="/users">
+            <li>
+              <PeopleOutlinedIcon className="icon" />
+              <apan>Users</apan>
+            </li>
+          </Link>
+          <Link to="/products">
+            <li>
+              <ProductionQuantityLimitsOutlinedIcon className="icon" />
+              <apan>Products</apan>
+            </li>
+          </Link>
+          <Link to="">
+            <li>
+              <BorderStyleOutlinedIcon className="icon" />
+              <apan>Orders</apan>
+            </li>
+          </Link>
+          <Link to="">
+            <li>
+              <DeliveryDiningOutlinedIcon className="icon" />
+              <apan>Delivery</apan>
+            </li>
+          </Link>
           <p className="title">USEFUL</p>
           <li>
             <QueryStatsOutlinedIcon className="icon" />
