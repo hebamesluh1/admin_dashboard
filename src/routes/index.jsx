@@ -5,6 +5,7 @@ import Login from './../pages/Login/index';
 import List from './../pages/List/index';
 import Single from './../pages/Single/index';
 import New from './../pages/New/index';
+import { userInputs, productInputs } from './../mock/dataForm';
 
 const Router = () => {
   return (
@@ -14,12 +15,12 @@ const Router = () => {
         <Route path={PATHS.LOGIN} element={<Login />} />
         <Route path={PATHS.USERS}>
           <Route index element={<List />} />
-          <Route path={PATHS.NEW} element={<New />} />
+          <Route path={PATHS.NEW} element={<New inputs={userInputs} title="Add New User"/>} />
           <Route path=":userId" element={<Single />} />
         </Route>
         <Route path={PATHS.PRODUCTS}>
           <Route index element={<List />} />
-          <Route path={PATHS.NEW} element={<New />} />
+          <Route path={PATHS.NEW} element={<New inputs={productInputs} title="Add New Product"/>} />
           <Route path=":productId" element={<Single />} />
         </Route>
       </Route>
@@ -36,5 +37,5 @@ export const PATHS = {
   LOGIN: "login",
   USERS: "users",
   NEW: "new",
-  PRODUCTS:"products"
+  PRODUCTS: "products"
 };
